@@ -3,6 +3,7 @@
     --secondary-color: blue;
     --accent1-color: black;
     --accent2-color: orange;
+    --border-color: #ccc;
 
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: "Roboto", sans-serif;
@@ -12,6 +13,11 @@
 body {
     font-family: var(--body-font);
     margin: 0;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 /* ===== HEADER TITLE ===== */
@@ -32,6 +38,7 @@ nav ul {
     padding: 10px;
     margin: 0;
     background-color: var(--secondary-color);
+    color:white
 }
 
 nav a {
@@ -66,7 +73,7 @@ h1 {
 /* ===== CARDS ===== */
 .card {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 15px;
     border-radius: 8px;
 }
