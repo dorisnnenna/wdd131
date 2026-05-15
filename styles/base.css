@@ -1,0 +1,100 @@
+:root {
+    --primary-color: white;
+    --secondary-color: blue;
+    --accent1-color: black;
+    --accent2-color: orange;
+
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+}
+
+/* ===== HEADER TITLE ===== */
+span {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* ===== NAVIGATION (FLEX FIXED) ===== */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--accent2-color);
+    color: black;
+    border-radius: 5px;
+}
+
+/* ===== MAIN LAYOUT (GRID FIXED) ===== */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Make title span full width */
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+/* ===== CARDS ===== */
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Card headings */
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    text-align: center;
+}
+
+/* ===== HOVER EFFECT (simple, correct) ===== */
+.card:hover {
+    background-color: var(--accent2-color);
+    transition: 0.3s;
+}
+
+/* ===== IMAGES ===== */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
