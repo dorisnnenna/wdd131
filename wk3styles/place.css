@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #c8102e;
+    --secondary-color: #00843d;
+    --card-background: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e8f0e5;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+/* CARDS */
+.data-card,
+.weather-card {
+    background-color: var(--card-background);
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CARD HEADINGS */
+.data-card h2,
+.weather-card h3 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem;
+    margin-top: 0;
+}
+
+/* WEATHER EMOTICON */
+.weather-heading::after {
+    content: " ⛅";
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 767px) {
+
+    .data-card,
+    .weather-card {
+        margin: 1rem;
+    }
+
+    .mobile-icon {
+        width: 40px;
+    }
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 768px) {
+
+    .data-card {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 250px;
+    }
+
+    .weather-card {
+        position: absolute;
+        bottom: 40px;
+        right: 20px;
+        width: 220px;
+    }
+
+    /* Hide SVG icon on desktop */
+    .mobile-icon {
+        display: none;
+    }
+}
